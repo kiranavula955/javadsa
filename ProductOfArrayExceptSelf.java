@@ -5,12 +5,16 @@ public class ProductOfArrayExceptSelf {
         int sum=1;
         for(int i=0;i<a.length;i++){
             sum*=a[i];
+             if(sum==0) sum=1;
             prefix[i]=sum;
+           
         }
         sum=1;
         for(int i=a.length-1;i>=0;i--){
             sum*=a[i];
+             if(sum==0) sum=1;
             suffix[i]=sum;
+            
         }
 
         for(int i=0;i<a.length;i++){
